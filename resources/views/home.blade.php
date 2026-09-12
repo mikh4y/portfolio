@@ -123,7 +123,6 @@
             <div class="code-badge badge-two">// DEVELOP</div>
             <div class="code-badge badge-three">// IMPROVE</div>
 
-            <div class="visual-label">AI × WEB DEVELOPMENT</div>
 
         </div>
 

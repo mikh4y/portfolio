@@ -5728,3 +5728,127 @@ body {
         transform: none !important;
     }
 }
+
+/* =========================================================
+   EXPERIENCE — MOBILE FIX
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .experience-section {
+        padding: 105px 20px 70px !important;
+    }
+
+    .experience-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        transform: none !important;
+    }
+
+    .experience-header {
+        display: block !important;
+        margin-bottom: 38px !important;
+    }
+
+    .experience-header h1 {
+        font-size: clamp(42px, 12vw, 58px) !important;
+        letter-spacing: -2px !important;
+    }
+
+    .experience-intro {
+        max-width: 100% !important;
+        margin-top: 20px !important;
+    }
+
+    .experience-timeline {
+        gap: 30px !important;
+    }
+
+    /* Remove desktop timeline column */
+    .experience-item {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        min-height: auto !important;
+        width: 100% !important;
+    }
+
+    /* Number + date */
+    .timeline-marker {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 14px !important;
+        padding-top: 0 !important;
+    }
+
+    .timeline-number {
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
+        font-size: 13px !important;
+    }
+
+    .timeline-date {
+        margin-top: 0 !important;
+        text-align: left !important;
+        line-height: 1.6 !important;
+        font-size: 9px !important;
+        letter-spacing: 1.5px !important;
+    }
+
+    /* Hide desktop vertical line on mobile */
+    .experience-timeline::before {
+        display: none !important;
+    }
+
+    /* Experience card */
+    .experience-card {
+        width: 100% !important;
+        padding: 22px 20px 24px !important;
+        border-radius: 12px !important;
+    }
+
+    .experience-card-top {
+        display: block !important;
+    }
+
+    .experience-card h2 {
+        font-size: 20px !important;
+        line-height: 1.35 !important;
+    }
+
+    .company {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+    }
+
+    .experience-location {
+        margin-top: 12px !important;
+        padding-top: 0 !important;
+        white-space: normal !important;
+        font-size: 10px !important;
+    }
+
+    .experience-tags {
+        margin: 18px 0 !important;
+        gap: 7px !important;
+    }
+
+    .experience-tags span {
+        padding: 6px 9px !important;
+        font-size: 8px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .experience-list {
+        gap: 8px !important;
+    }
+
+    .experience-list li {
+        padding-left: 16px !important;
+        font-size: 12px !important;
+        line-height: 1.65 !important;
+    }
+}
