@@ -13,7 +13,9 @@ FROM dunglas/frankenphp:php8.3-bookworm
 
 WORKDIR /app
 
-RUN install-php-extensions zip`r`n`r`nCOPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+RUN install-php-extensions zip
+
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 COPY . .
 
@@ -21,8 +23,7 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction
 
 COPY --from=frontend /app/public/build ./public/build
 
-RUN cp $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini \
-    && mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views \
+RUN mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views \
     && chown -R www-data:www-data storage bootstrap/cache
 
 COPY Caddyfile /etc/caddy/Caddyfile
