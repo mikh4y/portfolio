@@ -13,7 +13,7 @@ FROM dunglas/frankenphp:php8.3-bookworm
 
 WORKDIR /app
 
-COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+RUN install-php-extensions zip`r`n`r`nCOPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 COPY . .
 
